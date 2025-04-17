@@ -1,10 +1,55 @@
-/* Base Styles */
-* {
-    box-sizing: border-box;
+/* Komplett CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
     margin: 0;
     padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
+/* HTML5 display-role reset för äldre webbläsare */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Allmänna stilar */
 :root {
     --primary-color: #2e7d32;
     --secondary-color: #4caf50;
@@ -16,40 +61,57 @@
     --accent-bg: #f9f9f9;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
+    overflow-x: hidden;
 }
 
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Typography */
+/* Typografi */
 h1, h2, h3, h4, h5, h6 {
     color: var(--dark-color);
     margin-bottom: 15px;
     line-height: 1.3;
+    font-weight: 600;
 }
 
 h1 {
     font-size: 2.5rem;
     color: var(--primary-color);
+    font-weight: 700;
 }
 
 h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 h3 {
     font-size: 1.5rem;
     color: var(--primary-color);
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .highlight {
@@ -93,43 +155,47 @@ header {
     margin-bottom: 20px;
 }
 
-/* Button Styles - Enhanced for better mobile compatibility */
+/* Button specifika stilar */
 .cta-button {
     margin: 40px 0;
     text-align: center;
     width: 100%;
 }
 
-a.button, 
+.button,
+.button.primary-button,
+a.button,
 a.button.primary-button {
-    display: inline-block !important;
-    background-color: #2e7d32 !important;
-    color: #ffffff !important;
-    padding: 15px 30px !important;
-    border-radius: 50px !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-    font-size: 1.1rem !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-    border: none !important;
-    cursor: pointer !important;
-    text-align: center !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-a.button:hover, 
+.button:hover,
+.button.primary-button:hover,
+a.button:hover,
 a.button.primary-button:hover {
-    background-color: #4caf50 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15) !important;
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* App Preview Image */
 .hero-image {
-    margin-top: 30px;
+    margin-top: 40px;
     max-width: 100%;
 }
 
@@ -159,7 +225,8 @@ a.button.primary-button:hover {
     max-width: 1000px;
 }
 
-.problem, .solution {
+.problem, 
+.solution {
     padding: 30px;
     background-color: var(--white);
     border-radius: 10px;
@@ -185,98 +252,120 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design */
+/* Desktop specifika stilar */
 @media (min-width: 768px) {
-    .hero-content {
+    body.desktop .hero-content {
         flex-direction: row;
         text-align: left;
         justify-content: space-between;
         align-items: center;
     }
     
-    .hero-image {
+    body.desktop .hero-image {
         margin-left: 40px;
         margin-top: 0;
     }
     
-    .app-preview {
+    body.desktop .app-preview {
         max-height: 500px;
     }
 
-    .problem-solution-content {
+    body.desktop .problem-solution-content {
         flex-direction: row;
     }
 
-    .problem, .solution {
+    body.desktop .problem, 
+    body.desktop .solution {
         flex: 1;
     }
 }
 
+/* Mobil stilar - högt specificitet */
 @media (max-width: 767px) {
-    h1 {
+    body {
+        font-size: 16px;
+    }
+    
+    body h1 {
         font-size: 2rem;
     }
     
-    h2 {
+    body h2 {
         font-size: 1.8rem;
     }
     
-    .app-preview {
+    body .hero {
+        padding: 40px 0;
+    }
+    
+    body .hero h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    body .lead {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+    
+    body .app-preview {
         max-width: 80%;
         margin: 0 auto;
         display: block;
     }
 
-    .section-header h2 {
+    body .section-header h2 {
         font-size: 1.6rem;
     }
     
-    /* Förbättrade mobilstilar */
-    .hero {
+    body .problem-solution {
         padding: 40px 0;
     }
     
-    .problem-solution {
-        padding: 40px 0;
+    body .problem-solution-content {
+        padding: 0 10px;
     }
     
-    .problem, .solution {
-        padding: 20px;
-        margin: 0 15px;
+    body .problem, 
+    body .solution {
+        padding: 25px;
+        margin-bottom: 20px;
         border-radius: 10px;
         background-color: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     }
     
-    .cta-button {
+    body .cta-button {
         margin: 30px 0 40px 0;
     }
     
-    a.button, 
-    a.button.primary-button {
-        display: inline-block !important;
-        width: auto !important;
-        max-width: 80% !important;
-        padding: 12px 24px !important;
-        font-size: 1rem !important;
+    body .button,
+    body a.button, 
+    body a.button.primary-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+        width: auto;
+        max-width: none;
+        display: inline-block;
     }
     
-    .hero-image {
-        margin-top: 40px;
+    body .hero-image {
+        margin-top: 30px;
+        margin-bottom: 20px;
     }
 }
 
-/* Extra små enheter */
-@media (max-width: 360px) {
-    a.button, 
-    a.button.primary-button {
-        max-width: 90% !important;
-        padding: 10px 20px !important;
-        font-size: 0.95rem !important;
+/* Extra små skärmar */
+@media (max-width: 375px) {
+    body .button,
+    body a.button, 
+    body a.button.primary-button {
+        padding: 10px 24px;
+        font-size: 0.95rem;
     }
     
-    .problem, .solution {
-        padding: 15px;
-        margin: 0 10px;
+    body .problem, 
+    body .solution {
+        padding: 20px;
     }
 }
