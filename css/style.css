@@ -95,7 +95,7 @@ header {
 
 /* Button Styles - Enhanced for better mobile compatibility */
 .cta-button {
-    margin: 30px 0;
+    margin: 40px 0;
     text-align: center;
     width: 100%;
 }
@@ -231,11 +231,52 @@ footer a:hover {
         font-size: 1.6rem;
     }
     
-    /* Ensure buttons look correct on mobile */
+    /* Förbättrade mobilstilar */
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .problem-solution {
+        padding: 40px 0;
+    }
+    
+    .problem, .solution {
+        padding: 20px;
+        margin: 0 15px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+    
+    .cta-button {
+        margin: 30px 0 40px 0;
+    }
+    
     a.button, 
     a.button.primary-button {
-        display: block !important;
-        width: 80% !important;
-        margin: 0 auto !important;
+        display: inline-block !important;
+        width: auto !important;
+        max-width: 80% !important;
+        padding: 12px 24px !important;
+        font-size: 1rem !important;
+    }
+    
+    .hero-image {
+        margin-top: 40px;
+    }
+}
+
+/* Extra små enheter */
+@media (max-width: 360px) {
+    a.button, 
+    a.button.primary-button {
+        max-width: 90% !important;
+        padding: 10px 20px !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .problem, .solution {
+        padding: 15px;
+        margin: 0 10px;
     }
 }
