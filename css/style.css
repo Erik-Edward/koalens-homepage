@@ -197,12 +197,24 @@ a:hover {
     margin-top: 1rem;
 }
 
+.hero-image {
+    flex: 1; /* Allow image to take available space */
+    text-align: right;
+    overflow: hidden; /* Hide the parts of the image that zoom outside the container */
+}
+
 .hero-image img {
     max-width: 100%;
     height: auto;
-    max-height: 400px; /* Limit image height */
+    max-height: 550px; /* Keep the increased max height for now */
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Add shadow to image */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block; /* Prevents extra space below image */
+    transition: transform 0.4s ease-in-out; /* Add smooth transition for zoom */
+}
+
+.hero-image img:hover {
+    transform: scale(1.1); /* Zoom in slightly on hover */
 }
 
 /* Responsive styles for hero section */
