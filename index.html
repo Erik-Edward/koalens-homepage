@@ -9,6 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lägg till device-klass beroende på skärmstorlek
+            if (window.innerWidth >= 768) {
+                document.body.classList.add('desktop');
+            } else {
+                document.body.classList.add('mobile');
+            }
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -26,7 +36,7 @@
                         <h2>Koll på veganskt?<br><span class="highlight">KoaLens hjälper dig!</span></h2>
                         <p class="lead">Skanna ingredienslistor och få direkt besked om produkten är vegansk. Inga mer gissningar eller tidskrävande sökningar!</p>
                         <div class="cta-button">
-                            <a href="#" class="button primary-button" style="display: inline-block; background-color: #2e7d32; color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 600;">Ladda ner på Google Play</a>
+                            <a href="#" class="button primary-button" style="display: inline-block; background-color: #2e7d32; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Ladda ner på Google Play</a>
                         </div>
                     </div>
                     <div class="hero-image">
@@ -42,11 +52,11 @@
                     <h2>En enkel lösning på ett irriterande problem</h2>
                 </div>
                 <div class="problem-solution-content">
-                    <div class="problem">
+                    <div class="problem" style="background-color: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                         <h3>Problemet:</h3>
                         <p>Att läsa hela ingredienslistor och söka efter icke-veganska ingredienser är tidskrävande och frustrerande. Många ingredienser är svårtolkade och det är lätt att missa något.</p>
                     </div>
-                    <div class="solution">
+                    <div class="solution" style="background-color: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                         <h3>Vår lösning:</h3>
                         <p>KoaLens skannar snabbt ingredienslistan med din telefonkamera, analyserar varje ingrediens och ger dig ett tydligt resultat. Appen visar tydligt vilka ingredienser som är säkert veganska, potentiellt problematiska eller definitivt icke-veganska.</p>
                     </div>
