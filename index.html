@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Mobilspecifik CSS som bara laddas på mobila enheter -->
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 767px)">
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Lägg till device-klass beroende på skärmstorlek
@@ -17,6 +21,26 @@
             } else {
                 document.body.classList.add('mobile');
             }
+            
+            // Se till att knappen har rätt stil på mobila enheter
+            function updateButtonStyle() {
+                if (window.innerWidth < 768) {
+                    var buttons = document.querySelectorAll('.button');
+                    buttons.forEach(function(button) {
+                        button.style.display = 'inline-block';
+                        button.style.backgroundColor = '#2e7d32';
+                        button.style.color = 'white';
+                        button.style.padding = '12px 24px';
+                        button.style.borderRadius = '50px';
+                        button.style.textDecoration = 'none';
+                        button.style.fontWeight = '600';
+                        button.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+                    });
+                }
+            }
+            
+            updateButtonStyle();
+            window.addEventListener('resize', updateButtonStyle);
         });
     </script>
 </head>
