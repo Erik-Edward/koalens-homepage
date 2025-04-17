@@ -3,179 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KoaLens - Skanna och analysera ingredienser för veganer och personer med dietbehov">
-    <title>KoaLens - Koll på veganskt i matvaror</title>
+    <title>KoaLens - Smart AI-verktyg för att hitta rätt i KOL/KOF-information (TESTUPPDATERING CACHE)</title>
+    <meta name="description" content="KoaLens hjälper dig att navigera och hitta information i KOL/KOF-dokumentation. Snabbt, intelligent och träffsäkert.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <!-- Mobilspecifik CSS som bara laddas på mobila enheter -->
-    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 767px)">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
+        // Detektera om det är en stationär enhet (enkel metod baserat på skärmbredd)
         document.addEventListener('DOMContentLoaded', function() {
-            // Lägg till device-klass beroende på skärmstorlek
             if (window.innerWidth >= 768) {
                 document.body.classList.add('desktop');
-            } else {
-                document.body.classList.add('mobile');
             }
-            
-            // Se till att knappen har rätt stil på mobila enheter
-            function updateButtonStyle() {
-                if (window.innerWidth < 768) {
-                    var buttons = document.querySelectorAll('.button');
-                    buttons.forEach(function(button) {
-                        button.style.display = 'inline-block';
-                        button.style.backgroundColor = '#2e7d32';
-                        button.style.color = 'white';
-                        button.style.padding = '12px 24px';
-                        button.style.borderRadius = '50px';
-                        button.style.textDecoration = 'none';
-                        button.style.fontWeight = '600';
-                        button.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-                    });
-                }
-            }
-            
-            updateButtonStyle();
-            window.addEventListener('resize', updateButtonStyle);
         });
     </script>
-    <style>
-        /* Inlinestilar för att säkerställa att stegsektionen ser rätt ut */
-        .step-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .step-icon {
-            margin-right: 15px;
-        }
-        .step-number {
-            background-color: #2e7d32;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-right: 15px;
-        }
-        .how-it-works {
-            padding-top: 80px;
-            margin-top: 20px;
-            border-top: 1px solid #eaeaea;
-        }
-        .step-box {
-            text-align: left;
-        }
-        .step-box h3 {
-            margin: 0;
-        }
-    </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <h1>KoaLens</h1>
+                <h1>Koa<span class="highlight">Lens</span></h1>
             </div>
         </div>
     </header>
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h2>Koll på veganskt?<br><span class="highlight">KoaLens hjälper dig!</span></h2>
-                        <p class="lead">Skanna ingredienslistor och få direkt besked om produkten är vegansk. Inga mer gissningar eller tidskrävande sökningar!</p>
-                        <div class="cta-button">
-                            <a href="#" class="button primary-button" style="display: inline-block; background-color: #2e7d32; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Ladda ner på Google Play</a>
-                        </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div>
+                    <h2>Hitta snabbt i KOL/KOF med AI-hjälp</h2>
+                    <p class="lead">KoaLens är ett AI-verktyg som hjälper dig att navigera och hitta information i KOL/KOF-dokumentation. Slipp leta – få ett tydligt svar direkt.</p>
+                    <div class="cta-button">
+                        <a href="mailto:erik@koalens.se" class="button primary-button">Kontakta oss för demo</a>
                     </div>
-                    <div class="hero-image">
-                        <img src="https://via.placeholder.com/300x600?text=KoaLens+App" alt="KoaLens app skärmbild" class="app-preview">
-                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/app-preview.png" alt="KoaLens applikation" class="app-preview">
                 </div>
             </div>
-        </section>
-        
-        <section class="problem-solution">
-            <div class="container">
-                <div class="section-header">
-                    <h2>En enkel lösning på ett irriterande problem</h2>
+        </div>
+    </section>
+
+    <section class="problem-solution">
+        <div class="container">
+            <div class="section-header">
+                <h2>Problemet med KOL/KOF-dokumentation</h2>
+                <p>Många upplever att det är svårt att navigera i all information som finns i KOL/KOF. Det tar tid att hitta rätt, och ibland behöver man söka på flera ställen samtidigt.</p>
+            </div>
+            <div class="problem-solution-content">
+                <div class="problem">
+                    <h3>Utmaningar med traditionell sökning</h3>
+                    <ul>
+                        <li>Tidskrävande att hitta rätt information</li>
+                        <li>Svårt att navigera mellan olika källor</li>
+                        <li>Ofta måste man känna till exakt sökterm</li>
+                        <li>Svårt att få en överblick när information finns på flera ställen</li>
+                        <li>Kräver ofta förkunskap om var information finns</li>
+                    </ul>
                 </div>
-                <div class="problem-solution-content">
-                    <div class="problem" style="background-color: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                        <h3>Problemet:</h3>
-                        <p>Att läsa hela ingredienslistor och söka efter icke-veganska ingredienser är tidskrävande och frustrerande. Många ingredienser är svårtolkade och det är lätt att missa något.</p>
-                    </div>
-                    <div class="solution" style="background-color: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                        <h3>Vår lösning:</h3>
-                        <p>KoaLens skannar snabbt ingredienslistan med din telefonkamera, analyserar varje ingrediens och ger dig ett tydligt resultat. Appen visar tydligt vilka ingredienser som är säkert veganska, potentiellt problematiska eller definitivt icke-veganska.</p>
-                    </div>
+                <div class="solution">
+                    <h3>Fördelar med KoaLens</h3>
+                    <ul>
+                        <li>Får svar direkt utan att leta bland sökresultat</li>
+                        <li>Sök med naturligt språk - som att fråga en kollega</li>
+                        <li>Får alltid källhänvisningar till svaren</li>
+                        <li>Integrerar information från flera källor samtidigt</li>
+                        <li>Sparar tid och minskar frustration</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-        
-        <section class="how-it-works">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Hur KoaLens fungerar - TESTUPPDATERING</h2>
-                    <p>Det är enkelt att använda KoaLens. Bara tre steg till full insikt:</p>
+            <div class="cta-center">
+                <a href="mailto:erik@koalens.se" class="button primary-button">Kontakta oss för demo</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hur KoaLens fungerar - CACHEBUSTER TEST</h2>
+                <p>KoaLens kombinerar AI med din dokumentation för att ge snabba och korrekta svar.</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-box">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <h3>Ställ en fråga</h3>
+                    </div>
+                    <p>Skriv din fråga med vanligt språk, som om du frågade en kollega. Inga komplicerade söktermer krävs.</p>
                 </div>
-                <div class="steps-container">
-                    <div class="step-box" style="background-color: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                        <div class="step-header">
-                            <div class="step-icon">
-                                <i class="fas fa-camera" style="color: #2e7d32; font-size: 2.5rem;"></i>
-                            </div>
-                            <div class="step-number">1</div>
-                            <h3>Skanna</h3>
-                        </div>
-                        <p>Använd telefonens kamera för att skanna ingredienslistan på förpackningen. KoaLens identifierar texten automatiskt.</p>
+                <div class="step-box">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <h3>Få ett tydligt svar</h3>
                     </div>
-                    
-                    <div class="step-box" style="background-color: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                        <div class="step-header">
-                            <div class="step-icon">
-                                <i class="fas fa-search" style="color: #2e7d32; font-size: 2.5rem;"></i>
-                            </div>
-                            <div class="step-number">2</div>
-                            <h3>Analysera</h3>
-                        </div>
-                        <p>Appen analyserar varje ingrediens mot vår databas för att avgöra om den är vegansk, icke-vegansk eller osäker.</p>
-                    </div>
-                    
-                    <div class="step-box" style="background-color: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                        <div class="step-header">
-                            <div class="step-icon">
-                                <i class="fas fa-check-circle" style="color: #2e7d32; font-size: 2.5rem;"></i>
-                            </div>
-                            <div class="step-number">3</div>
-                            <h3>Se resultat</h3>
-                        </div>
-                        <p>Få ett tydligt svar på om produkten är vegansk, tillsammans med detaljer om varje ingrediens och dess status.</p>
-                    </div>
+                    <p>KoaLens hittar relevant information från olika källor, och presenterar ett koncist svar på din fråga.</p>
                 </div>
-                <div class="cta-center">
-                    <a href="#" class="button primary-button" style="display: inline-block; background-color: #2e7d32; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Prova nu - Ladda ner gratis</a>
+                <div class="step-box">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <h3>Se källhänvisning</h3>
+                    </div>
+                    <p>Varje svar är kopplat till konkreta källor i KOL/KOF, så du vet exakt var informationen kommer ifrån.</p>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="cta-center">
+                <a href="mailto:erik@koalens.se" class="button primary-button">Kontakta oss för demo</a>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
-            <p>&copy; 2023 KoaLens</p>
-            <p>
-              <a href="privacy.html">Integritetspolicy</a> |
-              <a href="terms.html">Användarvillkor</a>
-            </p>
+            <p>&copy; 2023 KoaLens. Kontakt: <a href="mailto:erik@koalens.se">erik@koalens.se</a></p>
         </div>
     </footer>
 </body>
