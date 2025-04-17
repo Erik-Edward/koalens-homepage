@@ -94,7 +94,8 @@
     
     /* Hur det funkar-sektion */
     .how-it-works {
-        padding: 40px 0 !important;
+        padding: 60px 0 40px 0 !important;
+        margin-top: 10px !important;
     }
     
     .steps-container {
@@ -106,14 +107,27 @@
     }
     
     .step-box {
-        flex: none !important;
         width: 90% !important;
         max-width: 320px !important;
-        padding: 25px 20px !important;
-        position: relative !important;
+        padding: 25px !important;
         background-color: white !important;
         border-radius: 10px !important;
         box-shadow: 0 4px 8px rgba(0,0,0,0.08) !important;
+        text-align: left !important;
+    }
+    
+    .step-header {
+        display: flex !important;
+        align-items: center !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .step-icon {
+        margin-right: 10px !important;
+        width: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
     
     .step-icon i {
@@ -121,11 +135,22 @@
     }
     
     .step-number {
-        width: 35px !important;
-        height: 35px !important;
-        font-size: 1rem !important;
-        top: -10px !important;
-        right: -10px !important;
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.9rem !important;
+        margin-right: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background-color: #2e7d32 !important;
+        color: white !important;
+        border-radius: 50% !important;
+        font-weight: bold !important;
+    }
+    
+    .step-box h3 {
+        margin: 0 !important;
+        font-size: 1.3rem !important;
     }
     
     /* Footer */
@@ -152,5 +177,23 @@
     
     .step-box {
         width: 95% !important;
+    }
+    
+    .step-header {
+        flex-wrap: nowrap !important;
+    }
+    
+    .step-icon {
+        width: 30px !important;
+    }
+    
+    .step-icon i {
+        font-size: 1.6rem !important;
+    }
+    
+    .step-number {
+        width: 25px !important;
+        height: 25px !important;
+        font-size: 0.8rem !important;
     }
 }
