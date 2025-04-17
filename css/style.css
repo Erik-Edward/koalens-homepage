@@ -101,7 +101,7 @@ footer { /* Targeting the footer element directly */
     padding: 2rem 0;
     text-align: center;
     font-size: 0.9rem;
-    /* margin-top: 4rem; */ /* Removed margin to prevent gap */
+    margin-top: 0; /* Explicitly set margin-top to 0 */
 }
 
 footer p {
