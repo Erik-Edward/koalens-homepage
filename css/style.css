@@ -246,7 +246,9 @@ a.button.primary-button:hover {
 
 /* Hur det funkar-sektion */
 .how-it-works {
-    padding: 60px 0;
+    padding: 80px 0 60px 0; /* Ökat avstånd ovanför sektionen */
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
 }
 
 .steps-container {
@@ -262,7 +264,7 @@ a.button.primary-button:hover {
     min-width: 250px;
     max-width: 350px;
     padding: 30px;
-    text-align: center;
+    text-align: left;
     position: relative;
     background-color: var(--white);
     border-radius: 10px;
@@ -275,32 +277,42 @@ a.button.primary-button:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-.step-icon {
+.step-header {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
 }
 
+.step-icon {
+    margin-right: 15px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .step-number {
-    position: absolute;
-    top: -15px;
-    right: -15px;
     background-color: var(--primary-color);
     color: white;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-right: 15px;
 }
 
 .step-box h3 {
-    margin: 20px 0 15px 0;
+    margin: 0;
+    flex-grow: 1;
 }
 
 .step-box p {
     margin-bottom: 0;
+    padding-left: 5px;
 }
 
 /* Footer */
@@ -392,9 +404,13 @@ footer a:hover {
         font-size: 1.6rem;
     }
     
-    body .problem-solution,
-    body .how-it-works {
+    body .problem-solution {
         padding: 40px 0;
+    }
+    
+    body .how-it-works {
+        padding: 60px 0 40px 0;
+        margin-top: 10px;
     }
     
     body .problem-solution-content {
@@ -433,11 +449,35 @@ footer a:hover {
     body .steps-container {
         flex-direction: column;
         align-items: center;
+        gap: 40px;
     }
     
     body .step-box {
         width: 100%;
-        margin-bottom: 40px;
+        max-width: 300px;
+        padding: 25px;
+    }
+    
+    body .step-header {
+        display: flex;
+        align-items: center;
+    }
+    
+    body .step-icon {
+        margin-right: 10px;
+        width: 40px;
+    }
+    
+    body .step-number {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+        margin-right: 10px;
+    }
+    
+    body .step-box h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0;
     }
 }
 
@@ -454,5 +494,13 @@ footer a:hover {
     body .solution,
     body .step-box {
         padding: 20px;
+    }
+    
+    body .step-header {
+        flex-wrap: wrap;
+    }
+    
+    body .step-box h3 {
+        margin-top: 5px;
     }
 }
