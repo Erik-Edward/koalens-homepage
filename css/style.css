@@ -393,6 +393,16 @@ a:hover {
         font-size: 0.9rem;
     }
 
+    /* Reduce font size for other CTA buttons on small screens */
+    .hero .cta-button {
+        font-size: 0.9rem;
+    }
+
+    .download-cta .cta-button-large {
+        font-size: 1rem; /* Keep slightly larger, but reduced */
+        padding: 0.9rem 2rem; /* Adjust padding slightly too */
+    }
+
     /* Optional: Adjust padding for sections on smaller screens if needed */
     .hero,
     .features,
