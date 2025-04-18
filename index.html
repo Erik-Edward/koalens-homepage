@@ -139,25 +139,25 @@
     </footer>
 
     <script>
-        const track = document.querySelector('.carousel-track');
-        const slides = Array.from(track.children);
-        const slideWidth = slides[0].getBoundingClientRect().width;
-        let slideIndex = 0;
-        const slideCount = slides.length;
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            let slideIndex = 0;
+            const slideCount = slides.length;
 
-        // Arrange slides next to each other
-        // slides.forEach((slide, index) => {
-        //     slide.style.left = slideWidth * index + 'px'; 
-        // }); // Not needed with flexbox approach
-
-        // Automatic sliding
-        setInterval(() => {
-            slideIndex++;
-            if (slideIndex >= slideCount) {
-                slideIndex = 0; // Loop back to the first slide
+            if (slideWidth > 0) { // Extra check to ensure width is calculated
+                setInterval(() => {
+                    slideIndex++;
+                    if (slideIndex >= slideCount) {
+                        slideIndex = 0; // Loop back to the first slide
+                    }
+                    track.style.transform = 'translateX(-' + slideIndex * slideWidth + 'px)';
+                }, 4000); // Change slide every 4 seconds
+            } else {
+                console.error("Carousel slide width is 0. Check layout or image loading.");
             }
-            track.style.transform = 'translateX(-' + slideIndex * slideWidth + 'px)';
-        }, 4000); // Change slide every 4 seconds
+        });
     </script>
 
 </body>
