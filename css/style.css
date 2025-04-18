@@ -210,11 +210,23 @@ a:hover {
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     display: block; /* Prevents extra space below image */
-    transition: transform 0.4s ease-in-out; /* Add smooth transition for zoom */
+    /* transition: transform 0.4s ease-in-out; */ /* Remove transition, use animation */
+    animation: subtleZoom 15s ease-in-out infinite alternate; /* Apply animation */
 }
 
-.hero-image img:hover {
-    transform: scale(1.1); /* Zoom in slightly on hover */
+/* Remove the hover effect */
+/* .hero-image img:hover {
+    transform: scale(1.1); 
+} */
+
+/* Define the subtle zoom animation */
+@keyframes subtleZoom {
+    from {
+        transform: scale(1); /* Start at normal size */
+    }
+    to {
+        transform: scale(1.05); /* Zoom in slightly (5%) */
+    }
 }
 
 /* Responsive styles for hero section */
