@@ -388,6 +388,11 @@ a:hover {
         gap: 1rem; /* Add some space between logo and button */
     }
 
+    /* Reduce font size for nav button on small screens */
+    .nav-button {
+        font-size: 0.9rem;
+    }
+
     /* Optional: Adjust padding for sections on smaller screens if needed */
     .hero,
     .features,
