@@ -211,7 +211,7 @@ a:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     display: block; /* Prevents extra space below image */
     /* transition: transform 0.4s ease-in-out; */ /* Remove transition, use animation */
-    animation: subtleZoom 15s ease-in-out infinite alternate; /* Apply animation */
+    animation: subtleZoom 8s ease-in-out infinite alternate; /* Apply animation - shorter duration */
 }
 
 /* Remove the hover effect */
@@ -225,7 +225,7 @@ a:hover {
         transform: scale(1); /* Start at normal size */
     }
     to {
-        transform: scale(1.05); /* Zoom in slightly (5%) */
+        transform: scale(1.1); /* Zoom in more (10%) */
     }
 }
 
