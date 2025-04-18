@@ -51,8 +51,20 @@
                     <p class="availability-note">Finns nu tillgänglig för Android.</p>
                 </div>
                 <div class="hero-image">
-                    <!-- Placeholder image path - update later if needed -->
-                    <img src="assets/images/mockup-dinner.jpeg" alt="Hand som håller en telefon som visar resultat från KoaLens appen"> 
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <img src="assets/images/start_table.png" alt="KoaLens app på ett bord">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/skanna_nu1.png" alt="Skanningsvy i KoaLens appen">
+                            </div>
+                             <div class="carousel-slide">
+                                <img src="assets/images/mockup-dinner.jpeg" alt="Hand som håller telefon med KoaLens resultat">
+                            </div>
+                        </div>
+                        <!-- Optional: Add carousel controls (dots/buttons) here -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -125,6 +137,28 @@
              </p>
         </div>
     </footer>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        let slideIndex = 0;
+        const slideCount = slides.length;
+
+        // Arrange slides next to each other
+        // slides.forEach((slide, index) => {
+        //     slide.style.left = slideWidth * index + 'px'; 
+        // }); // Not needed with flexbox approach
+
+        // Automatic sliding
+        setInterval(() => {
+            slideIndex++;
+            if (slideIndex >= slideCount) {
+                slideIndex = 0; // Loop back to the first slide
+            }
+            track.style.transform = 'translateX(-' + slideIndex * slideWidth + 'px)';
+        }, 4000); // Change slide every 4 seconds
+    </script>
 
 </body>
 </html> 
