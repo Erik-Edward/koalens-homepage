@@ -122,6 +122,11 @@ h1, h2, h3 {
 h1 {
     font-size: clamp(2.5rem, 5vw, 3.5rem); /* Responsive font size */
     font-weight: 700;
+    /* Add gradient */
+    background-image: linear-gradient(45deg, var(--primary-green), var(--dark-green));
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari compatibility */
+    color: transparent;
 }
 
 h2 {
@@ -181,10 +186,14 @@ a:hover {
 .hero .cta-button {
     margin-bottom: 0.5rem; /* Space below button */
     box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3); /* Add shadow to main CTA */
+    /* Ensure transition applies to the button itself */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero .cta-button:hover {
-     box-shadow: 0 6px 20px rgba(56, 142, 60, 0.4); /* Enhance shadow on hover */
+     background-color: #5cb85c; /* Slightly lighter/brighter green on hover */
+     transform: translateY(-3px); /* Keep or slightly increase lift */
+     box-shadow: 0 7px 22px rgba(76, 175, 80, 0.4); /* Enhance shadow more */
 }
 
 .hero .cta-button i {
