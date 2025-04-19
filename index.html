@@ -70,6 +70,49 @@
             </div>
         </section>
 
+        <!-- About Slider Section -->
+        <section class="about-slider" id="about">
+            <div class="container">
+                <h2>Lär känna KoaLens</h2>
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <!-- Slide 1: What & Problem -->
+                        <div class="slider-slide active">
+                            <div class="slide-image">
+                                <img src="assets/images/placeholder-scanning.png" alt="Placeholder: App skannar ingredienslista">
+                            </div>
+                            <div class="slide-content">
+                                <h3>Vad är KoaLens?</h3>
+                                <p>KoaLens använder AI och video för att blixtsnabbt analysera ingredienslistor direkt från förpackningen – helt utan streckkoder. Få svar direkt om en produkt är vegansk och slipp osäkerheten.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2: Who & Where -->
+                        <div class="slider-slide">
+                            <div class="slide-image">
+                                <img src="assets/images/placeholder-store.png" alt="Placeholder: Person använder app i butik">
+                            </div>
+                            <div class="slide-content">
+                                <h3>För vem och var?</h3>
+                                <p>Perfekt för veganer, nyfikna på växtbaserat eller dig som undviker specifika animaliska ingredienser. Använd KoaLens i mataffären, hemma vid skafferiet eller när du behöver snabb koll på språng.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3: How -->
+                        <div class="slider-slide">
+                            <div class="slide-image">
+                                <img src="assets/images/placeholder-result.png" alt="Placeholder: App visar resultat">
+                            </div>
+                            <div class="slide-content">
+                                <h3>Hur fungerar det?</h3>
+                                <p>Enkelt! 1. Rikta kameran mot ingredienserna. 2. Spela in en kort video. 3. Få ett tydligt AI-svar på sekunder.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-button prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-button next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
         <!-- Features section will go here -->
         <section class="features" id="features">
             <div class="container">
@@ -158,6 +201,40 @@
             } else {
                 console.error("Carousel slide width is 0. Check layout or image loading.");
             }
+        });
+    </script>
+
+    <!-- Script for About Slider -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliderTrack = document.querySelector('.about-slider .slider-track');
+            const slides = Array.from(sliderTrack.children).filter(el => el.classList.contains('slider-slide'));
+            const nextButton = document.querySelector('.about-slider .slider-button.next');
+            const prevButton = document.querySelector('.about-slider .slider-button.prev');
+            let currentSlideIndex = 0;
+            const slideCount = slides.length;
+
+            const updateSlides = (targetIndex) => {
+                slides[currentSlideIndex].classList.remove('active');
+                slides[targetIndex].classList.add('active');
+                currentSlideIndex = targetIndex;
+            };
+
+            nextButton.addEventListener('click', () => {
+                const nextIndex = (currentSlideIndex + 1) % slideCount;
+                updateSlides(nextIndex);
+            });
+
+            prevButton.addEventListener('click', () => {
+                const prevIndex = (currentSlideIndex - 1 + slideCount) % slideCount;
+                updateSlides(prevIndex);
+            });
+
+            // Initialize first slide
+            if (slides.length > 0) {
+                 slides[0].classList.add('active'); // Ensure the first slide is active initially
+            }
+
         });
     </script>
 

@@ -419,4 +419,111 @@ a:hover {
         font-size: 1.8rem; /* Slightly smaller h2 on mobile */
         margin-bottom: 2rem;
     }
+}
+
+/* About Slider Section */
+.about-slider {
+    padding: 60px 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.about-slider h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    overflow: hidden; /* Hide non-active slides */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.slider-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: none; /* Hide slides by default */
+    padding: 40px;
+    background-color: #fff;
+    align-items: center; /* Vertically center content if needed */
+    gap: 30px; /* Space between image and text */
+}
+
+.slider-slide.active {
+    display: flex; /* Show the active slide using flex */
+    /* Adjust flex direction for mobile if needed via media query */
+}
+
+.slide-image {
+    flex: 1; /* Adjust ratio as needed */
+    text-align: center;
+}
+
+.slide-image img {
+    max-width: 100%;
+    max-height: 300px; /* Limit image height */
+    height: auto;
+    border-radius: 8px;
+}
+
+.slide-content {
+    flex: 2; /* Adjust ratio as needed */
+}
+
+.slide-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.slide-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slider-button.prev {
+    left: 15px;
+}
+
+.slider-button.next {
+    right: 15px;
+}
+
+/* Responsive adjustments for slider */
+@media (max-width: 768px) {
+    .slider-slide.active {
+        flex-direction: column; /* Stack image and text */
+        padding: 30px;
+    }
+    .slide-content {
+        margin-top: 20px;
+        text-align: center;
+    }
 } 
