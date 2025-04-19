@@ -433,6 +433,12 @@ a:hover {
     color: #333;
 }
 
+/* Style for the brand name within the H2 */
+.about-slider h2 .headline-brand {
+    font-weight: 700; /* Make it bolder */
+    color: var(--primary-green); /* Use primary brand color */
+}
+
 .slider-container {
     position: relative;
     max-width: 1140px; /* Increased width further for desktop */
