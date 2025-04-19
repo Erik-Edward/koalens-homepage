@@ -235,6 +235,40 @@
                  slides[0].classList.add('active'); // Ensure the first slide is active initially
             }
 
+            // --- Swipe Functionality ---
+            let touchStartX = 0;
+            let touchEndX = 0;
+            const swipeThreshold = 50; // Minimum distance for a swipe
+
+            sliderTrack.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true }); // Use passive for better scroll performance
+
+            sliderTrack.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+
+            function handleSwipe() {
+                const deltaX = touchEndX - touchStartX;
+
+                if (Math.abs(deltaX) > swipeThreshold) {
+                    if (deltaX < 0) {
+                        // Swipe Left (Next)
+                        const nextIndex = (currentSlideIndex + 1) % slideCount;
+                        updateSlides(nextIndex);
+                    } else {
+                        // Swipe Right (Previous)
+                        const prevIndex = (currentSlideIndex - 1 + slideCount) % slideCount;
+                        updateSlides(prevIndex);
+                    }
+                }
+                // Reset values for next swipe
+                touchStartX = 0;
+                touchEndX = 0;
+            }
+            // --- End Swipe Functionality ---
+
         });
     </script>
 
