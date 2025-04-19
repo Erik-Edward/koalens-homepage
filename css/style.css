@@ -435,7 +435,7 @@ a:hover {
 
 .slider-container {
     position: relative;
-    max-width: 960px; /* Increased width */
+    max-width: 1140px; /* Increased width further for desktop */
     margin: 0 auto;
     overflow: hidden; /* Hide non-active slides */
     border-radius: 8px;
@@ -451,10 +451,10 @@ a:hover {
     min-width: 100%;
     box-sizing: border-box;
     display: none; /* Hide slides by default */
-    padding: 40px;
+    padding: 40px; /* Keep padding around content */
     background-color: #fff;
     align-items: center; /* Vertically center content if needed */
-    gap: 30px; /* Space between image and text */
+    gap: 50px; /* Increased space between image and text */
 }
 
 .slider-slide.active {
@@ -463,19 +463,19 @@ a:hover {
 }
 
 .slide-image {
-    flex: 1; /* Adjust ratio as needed */
+    flex: 1.5; /* Give image more space relative to text */
     text-align: center;
 }
 
 .slide-image img {
     max-width: 100%;
-    max-height: 500px; /* Increased max-height further for desktop */
+    /* Removed fixed max-height for desktop */
     height: auto;
     border-radius: 8px;
 }
 
 .slide-content {
-    flex: 2; /* Adjust ratio as needed */
+    flex: 1; /* Text takes remaining space */
 }
 
 .slide-content h3 {
@@ -509,24 +509,46 @@ a:hover {
 }
 
 .slider-button.prev {
-    left: 15px;
+    left: 25px; /* Moved further left */
 }
 
 .slider-button.next {
-    right: 15px;
+    right: 25px; /* Moved further right */
 }
 
 /* Responsive adjustments for slider */
 @media (max-width: 768px) {
+    .slider-container {
+        max-width: 95%; /* Allow slightly more width on mobile */
+    }
     .slider-slide.active {
         flex-direction: column; /* Stack image and text */
-        padding: 30px;
+        padding: 20px; /* Reduce padding slightly */
+        gap: 20px; /* Reduce gap */
+    }
+    .slide-image {
+        flex: none; /* Reset flex for stacking */
+        width: 100%; /* Ensure image container takes full width */
     }
     .slide-image img {
-        max-height: 300px; /* Decreased max-height for mobile */
+        max-height: 300px; /* Keep mobile max-height constraint */
+        width: auto; /* Let height constraint dictate width if needed */
+        max-width: 100%; /* Ensure image doesn't overflow */
+        margin: 0 auto; /* Center image if it's narrower than container */
     }
     .slide-content {
-        margin-top: 20px;
+        flex: none; /* Reset flex for stacking */
+        margin-top: 15px; /* Adjust top margin */
         text-align: center;
+    }
+    .slider-button {
+        padding: 8px 13px; /* Slightly smaller buttons */
+        font-size: 1rem;
+    }
+     .slider-button.prev {
+        left: 10px;
+    }
+    .slider-button.next {
+        right: 10px;
     }
 } 
