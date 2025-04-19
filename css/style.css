@@ -469,7 +469,7 @@ a:hover {
 
 .slide-image img {
     max-width: 100%;
-    max-height: 400px; /* Increased max-height */
+    max-height: 500px; /* Increased max-height further for desktop */
     height: auto;
     border-radius: 8px;
 }
@@ -523,7 +523,7 @@ a:hover {
         padding: 30px;
     }
     .slide-image img {
-        max-height: 350px; /* Constrain height on mobile */
+        max-height: 300px; /* Decreased max-height for mobile */
     }
     .slide-content {
         margin-top: 20px;
