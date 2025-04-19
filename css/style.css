@@ -509,11 +509,11 @@ a:hover {
 }
 
 .slider-button.prev {
-    left: 25px; /* Moved further left */
+    left: 15px; /* Moved further out */
 }
 
 .slider-button.next {
-    right: 25px; /* Moved further right */
+    right: 15px; /* Moved further out */
 }
 
 /* Responsive adjustments for slider */
@@ -546,9 +546,9 @@ a:hover {
         font-size: 1rem;
     }
      .slider-button.prev {
-        left: 10px;
+        left: 5px; /* Moved further out on mobile */
     }
     .slider-button.next {
-        right: 10px;
+        right: 5px; /* Moved further out on mobile */
     }
 } 
