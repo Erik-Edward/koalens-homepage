@@ -439,13 +439,22 @@ a:hover {
     color: var(--primary-green); /* Use primary brand color */
 }
 
-.slider-container {
+/* New wrapper for positioning buttons outside overflow */
+.slider-wrapper {
     position: relative;
-    max-width: 1140px; /* Increased width further for desktop */
-    margin: 0 auto;
+    max-width: 1140px; /* Match container width */
+    margin: 0 auto; /* Center align */
+}
+
+.slider-container {
+    position: relative; /* Keep relative for potential future use */
+    /* max-width: 1140px; /* Removed from here, now on wrapper */
+    /* margin: 0 auto; /* Removed from here, now on wrapper */
     overflow: hidden; /* Hide non-active slides */
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Added margin to ensure wrapper calculates height correctly if needed */
+    /* margin-bottom: 10px; Maybe not needed */
 }
 
 .slider-track {
@@ -515,17 +524,23 @@ a:hover {
 }
 
 .slider-button.prev {
-    left: 15px; /* Moved further out */
+    left: 0; /* Position relative to wrapper edge */
 }
 
 .slider-button.next {
-    right: 15px; /* Moved further out */
+    right: 0; /* Position relative to wrapper edge */
 }
 
 /* Responsive adjustments for slider */
 @media (max-width: 768px) {
+    .slider-wrapper {
+         max-width: 100%; /* Allow full width on mobile */
+         /* Add padding if buttons need space from screen edge */
+         padding: 0 25px; /* Example: Pushes buttons inwards */
+         box-sizing: border-box; /* Include padding in width */
+    }
     .slider-container {
-        max-width: 95%; /* Allow slightly more width on mobile */
+        max-width: 100%; /* Let container fill the padded wrapper */
     }
     .slider-slide.active {
         flex-direction: column; /* Stack image and text */
@@ -552,9 +567,11 @@ a:hover {
         font-size: 1rem;
     }
      .slider-button.prev {
-        left: 5px; /* Moved further out on mobile */
+        /* left: 5px; /* Resetting based on wrapper padding */
+        left: 5px; /* Adjusted for wrapper padding */
     }
     .slider-button.next {
-        right: 5px; /* Moved further out on mobile */
+        /* right: 5px; /* Resetting based on wrapper padding */
+        right: 5px; /* Adjusted for wrapper padding */
     }
 } 
