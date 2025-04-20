@@ -424,7 +424,8 @@ a:hover {
 /* About Slider Section */
 .about-slider {
     padding: 60px 0;
-    background-color: #f9f9f9; /* Light background for contrast */
+    /* background-color: #f9f9f9; /* Light background for contrast */
+    background-color: var(--background-light); /* Change to white */
 }
 
 .about-slider h2 {
@@ -452,7 +453,8 @@ a:hover {
     /* margin: 0 auto; /* Removed from here, now on wrapper */
     overflow: hidden; /* Hide non-active slides */
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Adjusted shadow */
     /* Added margin to ensure wrapper calculates height correctly if needed */
     /* margin-bottom: 10px; Maybe not needed */
 }
@@ -508,10 +510,12 @@ a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: var(--primary-green); /* Use primary green */
     color: white;
     border: none;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
+    padding: 12px 17px; /* Adjusted padding */
     cursor: pointer;
     border-radius: 50%;
     z-index: 10;
@@ -520,15 +524,18 @@ a:hover {
 }
 
 .slider-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    background-color: var(--dark-green); /* Darker green on hover */
 }
 
 .slider-button.prev {
-    left: 0; /* Position relative to wrapper edge */
+    /* left: 0; /* Position relative to wrapper edge */
+    left: -20px; /* Moved further out */
 }
 
 .slider-button.next {
-    right: 0; /* Position relative to wrapper edge */
+    /* right: 0; /* Position relative to wrapper edge */
+    right: -20px; /* Moved further out */
 }
 
 /* Responsive adjustments for slider */
@@ -563,15 +570,16 @@ a:hover {
         text-align: center;
     }
     .slider-button {
-        padding: 8px 13px; /* Slightly smaller buttons */
+        /* padding: 8px 13px; /* Slightly smaller buttons */
+        padding: 10px 15px; /* Adjusted mobile padding */
         font-size: 1rem;
     }
      .slider-button.prev {
-        /* left: 5px; /* Resetting based on wrapper padding */
-        left: 5px; /* Adjusted for wrapper padding */
+        /* left: 5px; /* Adjusted for wrapper padding */
+        left: -10px; /* Moved further out on mobile */
     }
     .slider-button.next {
-        /* right: 5px; /* Resetting based on wrapper padding */
-        right: 5px; /* Adjusted for wrapper padding */
+        /* right: 5px; /* Adjusted for wrapper padding */
+        right: -10px; /* Moved further out on mobile */
     }
 } 
