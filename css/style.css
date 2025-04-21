@@ -103,6 +103,28 @@ body {
     /* No extra shadow needed here probably */
 }
 
+/* Wrapper for nav button and language switcher */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Space between switcher and button */
+}
+
+/* Language switcher style */
+.language-switcher a {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.language-switcher a:hover {
+    color: var(--primary-text);
+    background-color: var(--background-grey);
+}
+
 /* FOOTER */
 footer { /* Targeting the footer element directly */
     background-color: var(--primary-text);
@@ -384,8 +406,12 @@ a:hover {
 /* Adjust header layout on smaller screens */
 @media (max-width: 767px) {
     .main-nav {
-        flex-direction: column; /* Stack logo and button */
-        gap: 1rem; /* Add some space between logo and button */
+        flex-direction: column; /* Stack logo and controls */
+        gap: 1rem; /* Add some space between logo and controls */
+    }
+    .nav-controls {
+        flex-direction: column-reverse; /* Stack switcher above button on mobile */
+        gap: 0.8rem;
     }
 
     /* Reduce font size for nav button on small screens */
