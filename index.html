@@ -3,13 +3,23 @@
 <head>
     <script>
         (function() {
-            // Redirect non-Swedish browsers to the English version
+            // Check for manual language selection override first
+            const urlParams = new URLSearchParams(window.location.search);
+            const manualLang = urlParams.get('lang');
+
+            if (manualLang === 'sv') {
+                // User manually selected Swedish, do nothing
+                return;
+            }
+
+            // If no manual override, check browser language for redirection
             const lang = navigator.language || navigator.userLanguage || 'en';
             if (!lang.toLowerCase().startsWith('sv')) {
-                // Get current path, remove filename if present, add English filename
                 const currentPath = window.location.pathname;
                 const basePath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
-                window.location.replace(basePath + 'index_en.html' + window.location.search + window.location.hash);
+                // Ensure we remove index.html before appending index_en.html if needed
+                const targetPath = (currentPath.endsWith('index.html') ? basePath : currentPath) + 'index_en.html';
+                window.location.replace(targetPath + window.location.search + window.location.hash);
             }
         })();
     </script>
