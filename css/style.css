@@ -595,6 +595,13 @@ a:hover {
     margin-bottom: 40px;
 }
 
+/* Style for the highlight within the H2 */
+.video-demo h2 .headline-highlight {
+    font-weight: 700; /* Bold */
+    font-style: italic; /* Italic */
+    color: var(--primary-green); /* Use primary brand color */
+}
+
 /* Responsive Video Wrapper */
 .video-wrapper {
     position: relative;
