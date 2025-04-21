@@ -582,4 +582,47 @@ a:hover {
         /* right: 5px; /* Adjusted for wrapper padding */
         right: -10px; /* Moved further out on mobile */
     }
+}
+
+/* Video Demo Section */
+.video-demo {
+    padding: 60px 0;
+    background-color: var(--background-light); /* Keep consistent white background */
+    text-align: center;
+}
+
+.video-demo h2 {
+    margin-bottom: 40px;
+}
+
+/* Responsive Video Wrapper */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 960px; /* Limit max width, adjust as needed */
+    margin: 0 auto;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Consistent shadow */
+    border-radius: 8px; /* Consistent radius */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove default border */
+}
+
+/* Ensure footer links are styled */
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-yellow);
 } 
