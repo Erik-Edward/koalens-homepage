@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <script>
         (function() {
             // Redirect non-Swedish browsers to the English version
+            // No need to redirect from the English page itself, could be removed
+            /*
             const lang = navigator.language || navigator.userLanguage || 'en';
             if (!lang.toLowerCase().startsWith('sv')) {
-                // Get current path, remove filename if present, add English filename
                 const currentPath = window.location.pathname;
                 const basePath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
                 window.location.replace(basePath + 'index_en.html' + window.location.search + window.location.hash);
             }
+            */
         })();
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KoaLens</title>
-    <meta name="description" content="KoaLens - Snabb vegansk koll med AI.">
+    <title>KoaLens - AI Vegan Check</title>
+    <meta name="description" content="KoaLens - Quick vegan check with AI.">
     <!-- Favicon Links -->
     <link rel="icon" href="assets/images/favicon/favicon.ico" sizes="any"><!-- Standard ICO -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
@@ -41,10 +43,10 @@
             <nav class="main-nav">
                 <div class="logo">
                     <a href="#">
-                        <img src="assets/images/website.logo.png" alt="KoaLens Logotyp" style="height: 50px; display: block;">
+                        <img src="assets/images/website.logo.png" alt="KoaLens Logo" style="height: 50px; display: block;">
                     </a>
                 </div>
-                <a href="#download" class="button nav-button">Ladda ner appen</a>
+                <a href="#download" class="button nav-button">Download the App</a>
             </nav>
         </div>
     </header>
@@ -54,26 +56,26 @@
         <section class="hero">
             <div class="container hero-container">
                 <div class="hero-text">
-                    <h1>Vegankoll på sekunder – Skanna med kameran.</h1>
-                    <p class="subtitle">Osäker om det är veganskt? Rikta kameran mot ingredienslistan och låt KoaLens AI ge dig svaret på ett ögonblick. Perfekt för dig som väljer veganskt!</p>
-                    <p class="e-number-tease"><em>(Psst...appen har även koll på alla de där jobbiga e-ämnerna!)</em></p>
-                    <p class="free-highlight"><strong>Ladda ner och använd helt gratis!</strong></p>
+                    <h1>Vegan check in seconds – Scan with your camera.</h1>
+                    <p class="subtitle">Unsure if it's vegan? Point the camera at the ingredients list and let KoaLens AI give you the answer in an instant. Perfect for those choosing vegan!</p>
+                    <p class="e-number-tease"><em>(Psst... the app also keeps track of all those tricky e-numbers!)</em></p>
+                    <p class="free-highlight"><strong>Download and use completely free!</strong></p>
                     <a href="#" target="_blank" class="button cta-button"> <!-- Placeholder link -->
-                        <i class="fab fa-google-play"></i> Bli betatestare via Google Play
+                        <i class="fab fa-google-play"></i> Become a beta tester via Google Play
                     </a>
-                    <p class="availability-note">Appen är i stängt betatest för Android. Klicka för att anmäla dig!</p>
+                    <p class="availability-note">The app is in closed beta testing for Android. Click to sign up!</p>
                 </div>
                 <div class="hero-image">
                     <div class="carousel">
                         <div class="carousel-track">
                             <div class="carousel-slide">
-                                <img src="assets/images/start_table.png" alt="KoaLens app på ett bord">
+                                <img src="assets/images/start_table.png" alt="KoaLens app on a table">
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/images/Skanna_sidan.png" alt="KoaLens app skanningssida">
+                                <img src="assets/images/Skanna_sidan.png" alt="KoaLens app scanning page">
                             </div>
                              <div class="carousel-slide">
-                                <img src="assets/images/Produkten_analyserad_vegan.png" alt="Hand som håller telefon med KoaLens resultat">
+                                <img src="assets/images/Produkten_analyserad_vegan.png" alt="Hand holding phone with KoaLens result">
                             </div>
                         </div>
                         <!-- Optional: Add carousel controls (dots/buttons) here -->
@@ -85,38 +87,38 @@
         <!-- About Slider Section -->
         <section class="about-slider" id="about">
             <div class="container">
-                <h2>Lär känna <span class="headline-brand">KoaLens</span></h2>
+                <h2>Get to know <span class="headline-brand">KoaLens</span></h2>
                 <div class="slider-wrapper">
                     <div class="slider-container">
                         <div class="slider-track">
                             <!-- Slide 1: What & Problem -->
                             <div class="slider-slide active">
                                 <div class="slide-image">
-                                    <img src="assets/images/analyserar.png" alt="Hand håller mobil som analyserar ingredienser i butik">
+                                    <img src="assets/images/analyserar.png" alt="Hand holding phone analyzing ingredients in store">
                                 </div>
                                 <div class="slide-content">
-                                    <h3>Vad är KoaLens?</h3>
-                                    <p>KoaLens använder AI och video för att blixtsnabbt analysera ingredienslistor direkt från förpackningen – helt utan streckkoder. Få svar direkt om en produkt är vegansk och slipp osäkerheten.</p>
+                                    <h3>What is KoaLens?</h3>
+                                    <p>KoaLens uses AI and video to instantly analyze ingredient lists directly from the packaging – completely without barcodes. Get immediate answers on whether a product is vegan and avoid uncertainty.</p>
                                 </div>
                             </div>
                             <!-- Slide 2: Who & Where -->
                             <div class="slider-slide">
                                 <div class="slide-image">
-                                    <img src="assets/images/resultat_vegan.png" alt="Person ser positivt vegan-resultat i appen i köksmiljö">
+                                    <img src="assets/images/resultat_vegan.png" alt="Person seeing positive vegan result in the app in a kitchen environment">
                                 </div>
                                 <div class="slide-content">
-                                    <h3>För vem och var?</h3>
-                                    <p>Perfekt för veganer, nyfikna på växtbaserat eller dig som undviker specifika animaliska ingredienser. Använd KoaLens i mataffären, hemma vid skafferiet eller när du behöver snabb koll på språng.</p>
+                                    <h3>For whom and where?</h3>
+                                    <p>Perfect for vegans, those curious about plant-based options, or anyone avoiding specific animal ingredients. Use KoaLens in the grocery store, at home in the pantry, or whenever you need a quick check on the go.</p>
                                 </div>
                             </div>
                             <!-- Slide 3: Language -->
                             <div class="slider-slide">
                                 <div class="slide-image">
-                                    <img src="assets/images/language.png" alt="Person tittar på internationell matvara i butikshylla">
+                                    <img src="assets/images/language.png" alt="Person looking at international food item on store shelf">
                                 </div>
                                 <div class="slide-content">
-                                    <h3>Språk är inget hinder</h3>
-                                    <p>Reser du utomlands? Hittat en spännande importvara? KoaLens läser ingredienslistor på vilket språk som helst och ger dig analysen direkt på svenska. Ta med dig tryggheten, vart du än är.</p>
+                                    <h3>Language is no barrier</h3>
+                                    <p>Traveling abroad? Found an exciting imported item? KoaLens reads ingredient lists in any language and gives you the analysis directly in English*. Bring peace of mind wherever you are.</p>
                                 </div>
                             </div>
                         </div>
@@ -130,8 +132,8 @@
         <!-- Video Demo Section -->
         <section class="video-demo" id="video-demo">
             <div class="container">
-                <h2>Se KoaLens <span class="headline-highlight">in action</span></h2>
-                <p class="video-description">Se hur snabbt och enkelt det är att få svar med KoaLens – från skanning till resultat.</p>
+                <h2>See KoaLens <span class="headline-highlight">in action</span></h2>
+                <p class="video-description">See how quick and easy it is to get answers with KoaLens – from scanning to results.</p>
                 <div class="video-wrapper"> <!-- Wrapper for responsive iframe -->
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/nGZv4vcTKAw?si=someRandomValueForPrivacy" title="KoaLens App Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
@@ -141,43 +143,43 @@
         <!-- Features section will go here -->
         <section class="features" id="features">
             <div class="container">
-                <h2>Mer än bara en veganskanner</h2>
+                <h2>More than just a vegan scanner</h2>
                 <div class="feature-grid">
-                    <!-- Feature 1: Snabb videoanalys -->
+                    <!-- Feature 1: Fast Video Analysis -->
                     <div class="feature-item">
                         <i class="fas fa-video feature-icon"></i>
-                        <h3>Snabb Videoanalys</h3>
-                        <p>Spela in ingredienslistan – AI:n analyserar och ger dig svar på sekunder.</p>
+                        <h3>Fast Video Analysis</h3>
+                        <p>Record the ingredient list – the AI analyzes and gives you answers in seconds.</p>
                     </div>
-                    <!-- Feature 4: Tydliga Resultat -->
+                    <!-- Feature 4: Clear Results -->
                      <div class="feature-item">
                         <i class="fas fa-clipboard-check feature-icon"></i>
-                        <h3>Tydliga Resultat</h3>
-                        <p>Få ett klart och tydligt besked – veganskt, ej veganskt, osäkert eller om en bevakad ingrediens hittats.</p>
+                        <h3>Clear Results</h3>
+                        <p>Get a clear and concise verdict – vegan, not vegan, uncertain, or if a watched ingredient is found.</p>
                     </div>
-                    <!-- Feature 2: Bevaka ingredienser -->
+                    <!-- Feature 2: Watch Ingredients -->
                     <div class="feature-item">
                         <i class="fas fa-user-check feature-icon"></i>
-                        <h3>Bevaka Ingredienser</h3>
-                        <p>Skapa din egen lista med ämnen att hålla koll på (t.ex. allergener, palmolja, socker).</p>
+                        <h3>Watch Ingredients</h3>
+                        <p>Create your own list of substances to keep an eye on (e.g., allergens, palm oil, sugar).</p>
                     </div>
-                    <!-- Feature 3: E-nummer Koll -->
+                    <!-- Feature 3: E-number Check -->
                     <div class="feature-item">
                         <i class="fas fa-flask feature-icon"></i>
-                        <h3>E-nummer Koll</h3>
-                        <p>Osäker på ett E-nummer? Använd den inbyggda sökfunktionen för snabbt svar om vegansk status.</p>
+                        <h3>E-number Check</h3>
+                        <p>Unsure about an E-number? Use the built-in search function for a quick answer on its vegan status.</p>
                     </div>
-                    <!-- Feature 5: Spara Historik -->
+                    <!-- Feature 5: Save History -->
                     <div class="feature-item">
                         <i class="fas fa-history feature-icon"></i>
-                        <h3>Spara din Historik</h3>
-                        <p>Spara dina analyser för att enkelt kunna se och komma åt tidigare resultat i historiken.</p>
+                        <h3>Save Your History</h3>
+                        <p>Save your analyses to easily view and access previous results in the history.</p>
                     </div>
                     <!-- Feature 6: Multi-language Support -->
                     <div class="feature-item">
                         <i class="fas fa-language feature-icon"></i>
-                        <h3>Flerspråksstöd</h3>
-                        <p>Skanna ingredienslistor på vilket språk som helst och få resultatet presenterat på svenska.</p>
+                        <h3>Multi-language Support</h3>
+                        <p>Scan ingredient lists in any language and get the results presented in English*.</p>
                     </div>
                 </div>
             </div>
@@ -186,11 +188,11 @@
         <!-- Download CTA section will go here -->
         <section class="download-cta" id="download">
              <div class="container cta-container">
-                 <h2>Skaffa KoaLens – Snabbare svar, tryggare val.</h2>
-                 <p>Ladda ner KoaLens och gör medvetna val enklare än någonsin.</p>
-                 <p class="free-highlight-cta"><strong>Appen är helt kostnadsfri att använda.</strong></p>
+                 <h2>Get KoaLens – Faster answers, safer choices.</h2>
+                 <p>Download KoaLens and make conscious choices easier than ever.</p>
+                 <p class="free-highlight-cta"><strong>The app is completely free to use.</strong></p>
                  <a href="#" target="_blank" class="button cta-button-large"> <!-- Placeholder link -->
-                     <i class="fab fa-google-play"></i> Bli betatestare via Google Play
+                     <i class="fab fa-google-play"></i> Become a beta tester via Google Play
                  </a>
             </div>
         </section>
@@ -200,9 +202,9 @@
     <footer>
         <div class="container">
             <!-- Footer content (copyright, links) will go here -->
-             <p>&copy; 2024 KoaLens. Alla rättigheter förbehållna.</p>
+             <p>&copy; 2024 KoaLens. All rights reserved.</p>
              <p class="footer-links">
-                <a href="privacy.html">Integritetspolicy</a> | <a href="terms.html">Användarvillkor</a> | <a href="delete-account.html">Kontoradering</a>
+                <a href="privacy_en.html">Privacy Policy</a> | <a href="terms_en.html">Terms of Service</a> | <a href="delete-account_en.html">Account Deletion</a>
              </p>
         </div>
     </footer>
