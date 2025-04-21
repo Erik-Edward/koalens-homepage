@@ -586,13 +586,24 @@ a:hover {
 
 /* Video Demo Section */
 .video-demo {
-    padding: 60px 0;
-    background-color: var(--background-light); /* Keep consistent white background */
+    /* padding: 60px 0; */
+    padding: 80px 0; /* Increased padding */
+    /* background-color: var(--background-light); /* Keep consistent white background */
+    background-color: var(--background-grey); /* Use light grey background */
     text-align: center;
 }
 
 .video-demo h2 {
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Reduced margin below H2 */
+}
+
+/* Style for the description paragraph */
+.video-demo p.video-description {
+    max-width: 600px; /* Limit width */
+    margin: 0 auto 40px auto; /* Center and add margin below */
+    color: var(--secondary-text);
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
 /* Style for the highlight within the H2 */
@@ -608,7 +619,8 @@ a:hover {
     padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
-    max-width: 960px; /* Limit max width, adjust as needed */
+    /* max-width: 960px; /* Limit max width, adjust as needed */
+    max-width: 880px; /* Reduced max width */
     margin: 0 auto;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Consistent shadow */
     border-radius: 8px; /* Consistent radius */
