@@ -115,14 +115,16 @@ body {
     color: var(--secondary-text);
     font-size: 0.9rem;
     text-decoration: none;
-    padding: 5px;
+    padding: 5px 10px; /* Adjusted padding */
+    border: 1px solid var(--border-color); /* Add subtle border */
     border-radius: 4px;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .language-switcher a:hover {
     color: var(--primary-text);
     background-color: var(--background-grey);
+    border-color: #ccc; /* Slightly darker border on hover */
 }
 
 /* FOOTER */
