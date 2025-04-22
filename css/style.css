@@ -241,6 +241,17 @@ a:hover {
     margin-top: 1rem;
 }
 
+/* Styling for Launch Status text in Hero */
+.launch-status {
+    font-size: 1rem;
+    color: var(--primary-text); /* Make it a bit more prominent */
+    margin-top: 1.5rem; /* Add space above */
+}
+
+.launch-status strong {
+    color: var(--primary-green); /* Highlight the main status */
+}
+
 .hero-image {
     flex: 1; /* Allow image to take available space */
     text-align: right;
@@ -399,6 +410,17 @@ a:hover {
 
 .cta-button-large i {
     font-size: 1.2em; /* Match icon size if needed, already covered by .button i */
+}
+
+/* Styling for Launch Status text in Download CTA */
+.launch-status-cta {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95); /* Keep it light */
+    margin-top: 1.5rem; /* Add space above */
+}
+
+.launch-status-cta strong {
+    color: var(--accent-yellow); /* Highlight with yellow */
 }
 
 /* Final adjustments and responsive checks next */
